@@ -1,93 +1,91 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Canggih dengan Animasi</title>
+    <title>Website radit portfolio</title>
+    <link rel= "Icon" type="jpg"
+    href=""> 
     <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <button class="open-btn" onclick="openSidebar()">☰ Open Menu</button>
-
-    <!-- Sidebar Menu -->
-    <div id="sidebar" class="sidebar">
-        <span class="close-btn" onclick="closeSidebar()">×</span>
-        <a href="https://raditya1ty.github.io/raditzto/">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="https://wa.me/082138555015">Contact</a>
-        <a href="#versi">Versi 0.3</a>
-        <a href="">Web Radit1ty</a>
-        <button onclick="playMusic()">Play Music</button>
-    <button onclick="pauseMusic()">Pause Music</button>
-
-    <button id="playBtn" onclick="playAudio()">lagu kebangsaan kita</button>
-    <button id="pauseBtn" onclick="pauseAudio()">Pause</button>
-
-    <!-- Audio element -->
-    <audio id="music" src="ssstik.io_1731484044814.mp3"></audio>
-    <audio id="audio" src="ramadhan.mp3"></audio>
-
-</div>
-
-   
-    <main>
-        <section class="hero">
-            <h1 class="animated-text">Selamat datang</h1>
-            <p class="hero-description">by:radit1ty</p>
-            <p class="hero-description">selamat melihat</p>
-        </section>
-
-        <section class="features">
-            <div class="feature-cards">
-                <div class="card">
-                    <h1>Grup mabar cdid</h1>
-                    <a href="https://whatsapp.com/channel/0029VaoDLNI1CYoZZvAEXT0X" target="_blank" class="button-link">
-                        <button class="animated-btn">Kunjungi Halaman</button>
-                    </a>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Radit1ty</div>
                 </div>
-                    <div class="feature-cards">
-                        <div class="card">
-                            <h1>Jual gempas roblox</h1>
-                            <a href="https://belirbx.com/accounts" target="_blank" class="button-link">
-                                <button class="animated-btn">Kunjungi Halaman</button>
-                            </a>
-                        </div>
-                        <div class="feature-cards">
-                            <div class="card">
-                                <h1>Group mabar roblox apapun vc bisa dll</h1>
-                                <a href="https://chat.whatsapp.com/L3k1McEqBxDFDnhFcKB5P9 " target="_blank" class="button-link">
-                                    <button class="animated-btn">Kunjungi Halaman</button>
-                                </a>
-                            </div>
-                        </div>
-                 <div class="feature-cards">
-            <div class="card">
-                    <h1>Akun Tiktok</h1>
-                    <a href="https://belirbx.com/accounts" target="_blank" class="button-link">
-                      <button class="animated-btn">Kunjungi Halaman</button>
-                     </a>
-                </div>
-        </section>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="about.html">Balajar coding</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="the trio Smipor.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input"> an expert porter build</span></h5>
+                    <h1>Raditya ruitama .H</h1>
+                    <p> When I'm at home, I work on building a city in my game, namely SCDID. Every day, no one helps, there are developers begging. If I do it, I'll be lazy.
+                       , that's where I'm lazy and I'll finish the build and I won't follow the begging
+                    </p>
 
-    </main>
+                    <div class="btn-group">
+                        <button><a href="about.html">belajar html</a></button>
+                        <button>tiktok</button>
 
-    <script src="script.js"></script>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.tiktok.com/@radit2kd"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+ 
+                 </div>
+
+                </div>                 
+            </div>
+        </div>
+     </div>
+
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["city ​​Building expert","Editing vidio","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
 </body>
 </html>
-
-
-<script>
-    // Mengambil elemen audio
-    const music = document.getElementById('music');
-
-    // Fungsi untuk memutar musik
-    function playMusic() {
-        music.play();
-    }
-
-    // Fungsi untuk menghentikan musik
-    function pauseMusic() {
-        music.pause();
-    }
-</script>
